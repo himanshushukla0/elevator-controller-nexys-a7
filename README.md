@@ -53,6 +53,9 @@ The controller implements the **LOOK / SCAN scheduling algorithm** (elevator alg
 
 ## 🏗️ Architecture & Module Hierarchy
 
+### System Block Diagram & Datapath
+![System Block Diagram](block_diagram.png)
+
 ```
 elevator_top.v
 ├── clk_en_gen        Synchronous 100 MHz prescaler (en_fsm, en_blink, en_ssd, en_1ms, en_1s)
@@ -62,6 +65,9 @@ elevator_top.v
 ├── ssd_mux           8-Digit 760 Hz multiplexed seven-segment display driver
 └── rgb_status        PWM-dimmed dual RGB LED cabin status controller
 ```
+
+### Finite State Machine (FSM) State Diagram
+![FSM State Diagram](fsm_state_diagram.png)
 
 ---
 
